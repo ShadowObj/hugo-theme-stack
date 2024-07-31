@@ -24,6 +24,7 @@
     </div>
 
     {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }}
+    {{ $showWordCount := .Params.wordCount | default (.Site.Params.article.wordCount) }}
     {{ $showDate := not .Date.IsZero }}
     {{ $showFooter := or $showDate $showReadingTime }}
     {{ if $showFooter }}
@@ -33,6 +34,15 @@
                 {{ partial "helper/icon" "date" }}
                 <time class="article-time--published">
                     {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                </time>
+            </div>
+        {{ end }}
+
+        {{ if $showWordCount }}
+            <div>
+                {{ partial "helper/icon" "letter-case" }}
+                <time class="article-time--reading">
+                    {{ T "article.wordCount" .WordCount }}
                 </time>
             </div>
         {{ end }}
