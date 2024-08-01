@@ -52,6 +52,12 @@ widget:
         title:
             other: 分类
 
+    rss:
+        title:
+            other: RSS
+        sign:
+            other: 点此订阅
+
 search:
     title:
         other: 搜索

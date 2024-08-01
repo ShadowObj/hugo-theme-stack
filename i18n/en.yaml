@@ -58,6 +58,12 @@ widget:
         title:
             other: Categories
 
+    rss:
+        title:
+            other: RSS
+        sign:
+            other: Subscribe
+
 search:
     title:
         other: Search
