@@ -36,6 +36,9 @@ article:
     wordCount:
         other: "{{ .Count }} words"
 
+    viewsCount:
+        other: NaN views
+
 notFound:
     title:
         other: Not Found
