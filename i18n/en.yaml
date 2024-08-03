@@ -31,7 +31,7 @@ article:
 
     readingTime:
         one: "{{ .Count }} minute read"
-        other: "{{ .Count }} minute read"
+        other: "{{ .Count }} minutes read"
 
     wordCount:
         other: "{{ .Count }} words"
@@ -66,6 +66,12 @@ widget:
             other: RSS
         sign:
             other: Subscribe
+
+    milestone:
+        title:
+            other: Milestones
+        sign:
+            other: "Click here"
 
 search:
     title:

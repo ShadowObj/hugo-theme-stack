@@ -61,6 +61,12 @@ widget:
         sign:
             other: 点此订阅
 
+    milestone:
+        title:
+            other: 大事记
+        sign:
+            other: 点此查看
+
 search:
     title:
         other: 搜索

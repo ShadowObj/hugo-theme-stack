@@ -1,0 +1,11 @@
+{{- $context := .Context -}}
+<section class="widget tagCloud" style="display: inline;">
+    <div class="widget-icon">
+        {{ partial "helper/icon" "milestone" }}
+    </div>
+    <h2 class="widget-title section-title">{{ T "widget.milestone.title" }}</h2>
+
+    <div class="tagCloud-tags">
+        <a href="{{ .Page.RelPermalink }}/page/milestones">{{ T "widget.milestone.sign" }}</a>
+    </div>
+</section>
