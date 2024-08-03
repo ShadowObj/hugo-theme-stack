@@ -1,0 +1,23 @@
+{{- $context := .Context -}}
+<div style="display: flex;flex-direction: row;gap:4vw;">
+<section class="widget tagCloud">
+    <div class="widget-icon">
+        {{ partial "helper/icon" "rss" }}
+    </div>
+    <h2 class="widget-title section-title">{{ T "widget.rss.title" }}</h2>
+
+    <div class="tagCloud-tags">
+        <a href="{{ .Page.RelPermalink }}/index.xml">{{ T "widget.rss.sign" }}</a>
+    </div>
+</section>
+<section class="widget tagCloud">
+    <div class="widget-icon">
+        {{ partial "helper/icon" "milestone" }}
+    </div>
+    <h2 class="widget-title section-title">{{ T "widget.milestone.title" }}</h2>
+
+    <div class="tagCloud-tags">
+        <a href="{{ .Page.RelPermalink }}/page/milestones">{{ T "widget.milestone.sign" }}</a>
+    </div>
+</section>
+</div>
