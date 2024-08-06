@@ -30,6 +30,9 @@ article:
     wordCount:
         other: "共 {{ .Count }} 词"
 
+    fuzzyWordCount:
+        other: "约 {{ .Count }} 词"
+
     viewsCount:
         other: NaN 次浏览
 
