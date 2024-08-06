@@ -24,6 +24,7 @@
     </div>
 
     {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }}
+    {{ $showFuzzyWordCount := .Params.fuzzyWordCount | default (.Site.Params.article.fuzzyWordCount) }}
     {{ $showWordCount := .Params.wordCount | default (.Site.Params.article.wordCount) }}
     {{ $showViewsCount := .Params.viewsCount | default (.Site.Params.article.viewsCount) }}
     {{ $showDate := not .Date.IsZero }}
@@ -40,12 +41,21 @@
         {{ end }}
 
         {{ if $showWordCount }}
-            <div>
-                {{ partial "helper/icon" "letter-case" }}
-                <time class="article-time--reading">
-                    {{ T "article.wordCount" .WordCount }}
-                </time>
-            </div>
+            {{ if $showFuzzyWordCount }}
+                <div>
+                    {{ partial "helper/icon" "letter-case" }}
+                    <time class="article-time--reading">
+                        {{ T "article.fuzzyWordCount" .FuzzyWordCount }}
+                    </time>
+                </div>
+            {{ else }}
+                <div>
+                    {{ partial "helper/icon" "letter-case" }}
+                    <time class="article-time--reading">
+                        {{ T "article.wordCount" .WordCount }}
+                    </time>
+                </div>
+            {{ end }}
         {{ end }}
 
         {{ if $showReadingTime }}
