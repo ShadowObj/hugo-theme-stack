@@ -42,29 +42,56 @@
 
         {{ if $showWordCount }}
             {{ if $showFuzzyWordCount }}
-                <div>
-                    {{ partial "helper/icon" "letter-case" }}
-                    <time class="article-time--reading">
-                        {{ T "article.fuzzyWordCount" .FuzzyWordCount }}
-                    </time>
-                </div>
+                {{ if gt .Params.wordNumber 0 }}
+                    <div>
+                        {{ partial "helper/icon" "letter-case" }}
+                        <time class="article-time--reading">
+                            {{ T "article.fuzzyWordCount" .Params.wordNumber }}
+                        </time>
+                    </div>
+                {{ else }}
+                    <div>
+                        {{ partial "helper/icon" "letter-case" }}
+                        <time class="article-time--reading">
+                            {{ T "article.fuzzyWordCount" .FuzzyWordCount }}
+                        </time>
+                    </div>
+                {{ end }}
             {{ else }}
-                <div>
-                    {{ partial "helper/icon" "letter-case" }}
-                    <time class="article-time--reading">
-                        {{ T "article.wordCount" .WordCount }}
-                    </time>
-                </div>
+                {{ if gt .Params.wordNumber 0 }}
+                    <div>
+                        {{ partial "helper/icon" "letter-case" }}
+                        <time class="article-time--reading">
+                            {{ T "article.wordCount" .Params.wordNumber }}
+                        </time>
+                    </div>
+                {{ else }}
+                    <div>
+                        {{ partial "helper/icon" "letter-case" }}
+                        <time class="article-time--reading">
+                            {{ T "article.wordCount" .WordCount }}
+                        </time>
+                    </div>
+                {{ end }}
             {{ end }}
         {{ end }}
 
         {{ if $showReadingTime }}
-            <div>
-                {{ partial "helper/icon" "clock" }}
-                <time class="article-time--reading">
-                    {{ T "article.readingTime" .ReadingTime }}
-                </time>
-            </div>
+            {{ if gt .Params.wordNumber 0 }}
+                <div>
+                    {{ partial "helper/icon" "clock" }}
+                    <time class="article-time--reading">
+                        {{ T "article.readingTime" .Params.readingNumber }}
+                    </time>
+                </div>
+            {{ else }}
+                <div>
+                    {{ partial "helper/icon" "clock" }}
+                    <time class="article-time--reading">
+                        {{ T "article.readingTime" .ReadingTime }}
+                    </time>
+                </div>
+            {{ end }}
         {{ end }}
 
         {{ if $showViewsCount }}
