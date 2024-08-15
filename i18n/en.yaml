@@ -42,6 +42,9 @@ article:
     viewsCount:
         other: NaN views
 
+    details:
+        other: Click to expand
+
 notFound:
     title:
         other: Not Found

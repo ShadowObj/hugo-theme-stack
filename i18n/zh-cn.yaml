@@ -36,6 +36,9 @@ article:
     viewsCount:
         other: NaN 次浏览
 
+    details:
+        other: 点击展开
+
 notFound:
     title:
         other: 404 错误

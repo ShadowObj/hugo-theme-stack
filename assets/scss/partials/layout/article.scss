@@ -311,8 +311,10 @@
     pre {
         overflow-x: auto;
         display: block;
-        background-color: var(--pre-background-color);
-        color: var(--pre-text-color);
+        //background-color: var(--pre-background-color);
+        background-color: #272822;
+        //color: var(--pre-text-color);
+        color: #f8f8f2;
         font-family: var(--code-font-family);
         line-height: 1.428571429;
         word-break: break-all;
@@ -330,8 +332,9 @@
     }
 
     .highlight {
-        background-color: var(--pre-background-color);
-        padding: var(--card-padding);
+        //background-color: var(--pre-background-color);
+        background-color: #272822;;
+        padding: var(--code-padding);
         position: relative;
 
         &:hover {
@@ -371,6 +374,21 @@
         padding: 0 var(--card-padding);
         overflow-x: auto;
         display: block;
+    }
+
+    .toc--inline {
+        background-color: var(--blockquote-background-color); 
+        margin-left: calc((var(--card-padding)) * -1); 
+        margin-right: calc((var(--card-padding)) * -1); 
+        padding-left: var(--card-padding);
+        padding-right: var(--card-padding);
+
+        padding-top: var(--card-padding);
+        padding-bottom: var(--card-padding);
+
+        @include respond(xl) {
+            display: none;
+        }
     }
 
     table {
