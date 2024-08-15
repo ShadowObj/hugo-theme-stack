@@ -71,6 +71,12 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
         --card-padding: 30px;
     }
 
+    --code-padding: 10px;
+
+    @include respond(md) {
+        --code-padding: 15px;
+    }
+
     --small-card-padding: 25px 20px;
 
     @include respond(md) {
