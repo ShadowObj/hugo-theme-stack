@@ -1,9 +1,8 @@
 {{ if (.Scratch.Get "TOCEnabled") }}
-<section class="toc toc--inline">
-    <h2 class="">{{ T "article.tableOfContents" }}</h2>
-    <div class="" >
+<section class="toc--inline">
+    <h2>{{ T "article.tableOfContents" }}</h2>
+    <div class="widget--toc--inline" >
         {{ .TableOfContents }}
-
     </div>
 </section>
 {{ end }}
