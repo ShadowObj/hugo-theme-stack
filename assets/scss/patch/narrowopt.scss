@@ -1,0 +1,12 @@
+/* Narrow Screen Optimize */
+.main-container {
+    & > main.main > article.main-article.narrow-opt {
+        & > section.article-content > ul { padding: 0 1.5rem; }
+        margin-left: calc(var(--main-container-padding) * -1);
+        min-width: calc(100% + (var(--main-container-padding) * 2));
+        @include respond(md) {
+            margin-left: 0;
+            min-width: 100%;
+        }
+    }
+}

@@ -53,15 +53,15 @@
             }
 
             .site-name {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
 
                 @include respond(2xl) {
-                    font-size: 1.75rem;
+                    font-size: 1.85rem;
                 }
             }
 
             .site-description {
-                font-size: 1.4rem;
+                font-size: 1.5rem;
             }
         }
     }
@@ -133,10 +133,10 @@
     .site-name {
         color: var(--accent-color);
         margin: 0;
-        font-size: 1.6rem;
+        font-size: 1.7rem;
 
         @include respond(2xl) {
-            font-size: 1.8rem;
+            font-size: 1.75rem;
         }
     }
 
@@ -144,7 +144,7 @@
         color: var(--body-text-color);
         font-weight: normal;
         margin: 0;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
 
         @include respond(2xl) {
             font-size: 1.6rem;
