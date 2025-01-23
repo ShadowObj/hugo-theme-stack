@@ -131,7 +131,7 @@
     list-style: none;
     overflow-y: auto;
     flex-grow: 1;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     background-color: var(--card-background);
 
     box-shadow: var(--shadow-l1);
@@ -158,6 +158,7 @@
     }
 
     @include respond(md) {
+        font-size: 1.4rem;
         align-items: flex-end;
         display: flex;
         background-color: transparent;
