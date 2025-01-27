@@ -59,7 +59,7 @@
         </ol>
     {{- end -}}
 
-    <ol class="menu {{ if .Site.Params.narrowScreenOpt }}narrow-opt{{ end }}" id="main-menu">
+    <ol class="menu {{ if .Site.Params.mobileOptimize }}mobileOpt{{ end }}" id="main-menu">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         {{ $active := or (eq $currentPage.Title .Name) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
