@@ -95,3 +95,10 @@ footer:
 
     designedBy:
         other: Theme {{ .Theme }} designed by {{ .DesignedBy }}
+
+popup:
+    isMirror:
+        title: Accessing Mirror Site
+        content:
+            str0: This mirror site is set up by the blogger to facilitate access for users in mainland China.
+            str1: 'Main site: '

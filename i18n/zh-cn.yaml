@@ -89,3 +89,10 @@ footer:
 
     designedBy:
         other: 主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计
+
+popup:
+    isMirror:
+        title: 正在访问镜像
+        content:
+            str0: 本镜像站由博主架设, 以便中国大陆用户访问. 
+            str1: '主站: '
